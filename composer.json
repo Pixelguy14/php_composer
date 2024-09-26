@@ -1,0 +1,21 @@
+{
+    "name": "julian/php_composer",
+    "description": "Crud in php with mysql",
+    "type": "roject",
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "firebase/php-jwt": "^6.10",
+        "symfony/http-foundation": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pixelguy14",
+            "email": "Pixelguy14@gmail.com"
+        }
+    ]
+}
