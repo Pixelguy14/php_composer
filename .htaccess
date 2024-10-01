@@ -1,4 +1,20 @@
+# Activa el motor de reescritura de URL
 RewriteEngine On
+# Redirigir si no es un archivo o directorio real
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.php [QSA, L]
+
+# Reescribir la URL si las condiciones anteriores son ciertas
+RewriteRule ^ index.php [QSA,L]
+
+# Añadir la ejecución de archivos .php y .html con PHP 8.2
+AddHandler application/x-httpd-php82 .php .html
+# Configurar ejecución de PHP desde .htaccess
+AddType application/x-httpd-php .html 
+# Configura opciones de PHP desde .htaccess
+php_flag display_errors On 
+# Establecer el límite de memoria para la ejecución del script php.
+php_value memory_limit 256M 
+
+# Establecer el tiempo máximo de ejecución de los scripts php.
+php_value max_execution_time 60 
