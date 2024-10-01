@@ -1,0 +1,21 @@
+# Add this code in phpmyadmin
+CREATE DATABASE IF NOT EXISTS proyecto;
+
+USE proyecto;
+
+CREATE TABLE IF NOT EXISTS empleados (
+id int AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(255) NOT NULL,
+apaterno VARCHAR(255) NOT NULL,
+amaterno VARCHAR(255) NOT NULL,
+direccion VARCHAR(255),
+telefono VARCHAR(255),
+ciudad VARCHAR(255),
+estado VARCHAR(255),
+usuario VARCHAR(255) UNIQUE NOT NULL,
+password VARCHAR(255) NOT NULL,
+rol VARCHAR(255) NOT NULL
+);
+
+# El puerto que se tiene que poner en el archivo .env se muestra en el phpmyadmin parte superior donde dice Servidor:localhost:3306
+# 3306 puede variar.

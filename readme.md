@@ -27,5 +27,6 @@ vendor directory: yes
 install dependencies: yes
 
 # To run the proyect:
-$ php -S localhost:8089
+$ php -S localhost:8889
+# Remember this port has to be different from .env
 
